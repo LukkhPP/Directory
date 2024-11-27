@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+html, body {
+    min-height: 100%;
+}
+
+header{
+    position: absolute;
+    width: max-content;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+body{
+    background-color: rgb(214, 227, 255);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrollbars */
+    position: relative;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    overflow: hidden;
+    width: 1500px;
+    height: 1000px;
+    border-radius: 50%; /* Make it a circle */
+    background: radial-gradient(circle, rgba(252, 7, 7, 0.4) 0%, rgba(0, 0, 0, 0) 60%);
+    filter: brightness(2) blur(30px);
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 2; /* Place it behind the content */
+}
+
+
+.Buttons-class{
+    /*vertical-align: middle;*/
+    position: absolute;
+    padding: 30px;
+    margin: 0px;
+    max-width: 70px;;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+}
+.Logos{
+    position: absolute;
+    padding: 30px;
+    margin: 0px;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+#PSDNlogo {
+    image-rendering: crisp-edges;
+    height: 80px;
+    filter: contrast(1.2);
+    opacity: 0.8;
+    box-shadow: 0px 2px 6px rgba(54, 66, 94, 0.527);
+    border-radius: 100%;
+    margin:0;
+    padding:0;
+}
+#Logo_Name{
+    position: absolute;
+    width: max-content;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0px;
+    font-size: 40px;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    color: rgb(36, 26, 122);
+    transition: 0.18s ease-in-out;
+}
+
+
+#Logo_Name:hover{
+    color:rgb(148, 34, 34);
+    opacity: 1;
+    
+}
+
+
+.Btton{
+    margin-bottom: 15px;
+    display: inline-block;  
+    background-color: rgb(214, 227, 255);
+    border-radius: 5px;
+    border: none;
+    height: 60px;
+    width: 70px;
+    padding: 15px;
+    font-size: 30px;
+    color: rgb(36, 26, 122);
+    box-shadow: 0px 2px 6px rgba(54, 66, 94, 0.527);
+    transition: 0.15s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.Btton:hover{
+    background-color: rgb(36, 26, 122);
+    color: rgb(214, 227, 255);
+    z-index: 2;
+}
+
+#bttn-X{
+    display: inline-block;
+    margin: 4px;  
+    background: none;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    max-height: 40px;
+    width: 40px;
+    max-width: 40px;
+    padding: 0;
+    font-size: 30px;
+    color: rgb(221, 229, 245);
+    transition: 0.18s ease-in-out;
+    cursor: pointer;
+}
+
+.Btton:active, #bttn-X:active{
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transform:scale(1.08);
+    z-index: 2;
+}
+
+.close_bot{
+    display: inline-block;
+    margin: 4px;  
+    background: none;
+    border-radius: 5px;
+    border: none;
+    height: 60px;
+    max-height: 60px;
+    width: 60px;
+    max-width: 60px;
+    padding: 0;
+    font-size: 30px;
+    color: rgb(36, 26, 122);
+    transition: 0.18s ease-in-out;
+    cursor: pointer;
+}
+
+
+.Searchbar{ 
+    display: inline-block;
+    /*position: fixed;*/
+    margin-top: 7px;
+    height: 40px;
+    width: 280px;
+    background: none;
+    border-style: solid;
+    border-width: medium;
+    border-color: rgb(36, 26, 122);
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+
+}
+.Searchbar::placeholder{
+    color: rgba(36, 26, 122, 0.582);
+}
+
+
+.close_bot:hover{
+    color:rgb(148, 34, 34);
+    transform:scale(1.2);
+    /*font-size: 35px;*/
+}
+
+.toppanelsection{
+    right: 0;
+    display: inline-block;
+    vertical-align: middle, top;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 400px;
+    height: 80px;
+}
+#topSEC{
+    max-width: 900px;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    
+    height: 50px;
+    
+}
+
+#leftPanelMap, #leftPanelUser {
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(190, 204, 235, 0.692);
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content:first baseline;
+    z-index: 3;
+}
+.res{
+    width: 350px;
+    height: 85vh;
+    background: none;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow-y: auto;
+    
+}
+
+/* Style the scrollbar */
+.res::-webkit-scrollbar {
+    width: 14px; /* Set the width of the scrollbar */
+}
+
+/* Style the track (background of scrollbar) */
+.res::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the scrollbar track */
+    border-radius: 10px;  /* Rounded corners for the track */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+.res::-webkit-scrollbar-thumb {
+    background-color: rgb(36, 26, 122); /* Color of the scrollbar thumb */
+    border-radius: 10px;    /* Rounded corners for the thumb */
+    border: 3px solid #f1f1f1; /* Border around the thumb to create padding */
+}
+
+/* Style the scrollbar thumb when hovering */
+.res::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(148, 34, 34); /* Darken the thumb on hover */
+}
+
+.result {
+    margin: 5px 0;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(36, 26, 122);
+    cursor: pointer;
+    font-size: 19px;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    transition: 0.15s ease-in-out;
+    position:relative ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    
+}
+#textINF{
+    
+    margin-top: 0;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-style: normal;
+    
+}
+#Icon-Building{
+    margin-top: 2px;
+    display: inline-block;
+    font-size: 25px;
+    
+
+}
+.result:hover {
+    background-color: rgb(148, 34, 34);
+}
+
+.result:active {
+    transform:scale(0.9);
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+#contents{
+    margin: 5px 0;
+    margin-bottom: 10px;
+    padding: 5px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background:none;
+    font-family: "Concert One", sans-serif;
+    color: rgb(36, 26, 122);
+    vertical-align: center;
+    text-align: center;
+}
+#NameofOD{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 18px;
+    color: rgb(255, 255, 255);
+    font-size: 24px; /* Dynamically adjusts text size */
+    transition: font-size 0.3s ease;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    padding-left: 30px;
+    padding-right: 30px;
+    word-spacing: -3px;
+    
+}
+.i10{
+    display: block; margin-top: 85px;font-size: 24px; font-style: normal;
+}
+
+#i20{
+    display: block; margin-top: 40px; font-size: 140px; font-style: normal;
+}
+
+.i30{
+    display: block; margin-top: 30px; font-size: 15px; font-style: normal;
+}
+
+#front_panel{
+    width: 900px;
+    height: 450px;
+    position: fixed;
+    background-color: rgba(69, 88, 128, 0.466);
+    transform: translateY(200%);
+    display: inline-block;
+    z-index: 3;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+
+#arrows:hover{
+    transform:scale(1.2);
+    cursor: pointer;
+}
+
+
+/*Departments*/
+#picto_loc{
+    position: absolute;
+    z-index: -4;
+    overflow: hidden;
+    margin: 0;
+    transition: z-index 0.3s ease-in-out;
+    /*pointer-events: none;*/
+    
+}
+
+
+.models{
+    margin: 0;
+    overflow: hidden;
+}
+.departM{
+    display: block;
+    background: none;
+    border: none;
+    color: rgb(255, 0, 0);
+    font-size: 40px;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: center;
+    padding: 4px;
+    margin: 0;
+    
+}
+
+
+
+.departM:active{
+    background: none;
+    border: none;
+    color:rgb(36, 26, 122);
+    font-size: 40px;
+    transform:scale(1.2);
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+
+
+
+/*Left Panel*/
+
+#leftPanelMap.open, #leftPanelUser.open, #front_panel.open{
+    transform: translate(0);
+}
+.small-text {
+    font-size: 16px; /* Smaller font size for multi-line text */
+}
+
+
