@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="interface.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <!--Logo-->
+        <h1 id="Logo_Name">IMD</h1>
+    </header>
+    <!--Buttons-class is for containment of all buttons-->
+    <div class="Buttons-class">
+        <!--Department Navigation Button-->
+        <button class="Btton" id="Search-Dept">
+            <i class="fa-solid fa-map-location-dot"></i>
+        </button>
+        <!--User's Button-->
+        <button class="Btton" id="Search-User">
+            <i class="fa-solid fa-user"></i>
+        </button>
+
+    </div>
+
+    <div class="Logos">
+        <img src="./public/PSDN.png" id="PSDNlogo">
+    </div>
+
+    
+    <!--Left Panel-->
+    <div id="leftPanelMap">
+        <div class="toppanelsection" >
+            <button class="close_bot" id="x_bttn">
+                <i class="fa-solid fa-square-xmark"></i>
+            </button>
+            <input class="Searchbar" name="SDepart" id="Department_Search" type="text" placeholder="Search for Department/Office.." >
+        </div>
+        <div class="res" id="Department_results">
+            <div id="contents"> 
+                <i class="i10">Interactive Mapping Directory</i>
+                <i id="i20" class="fa-solid fa-map-location-dot"></i>
+                <i class="i30" >Find an Office or Department!</i>
+            </div>
+        </div>
+    </div>
+
+    <div id="leftPanelUser">
+        <div class="toppanelsection" >
+            <button class="close_bot" id="x_bttnuser">
+                <i class="fa-solid fa-square-xmark"></i>
+            </button>
+            <input class="Searchbar" name="SEmployee" id="Employee_Search" type="text" placeholder="Search for Employee..">
+        </div>
+        <div class="res" id="Employee_results">
+
+        </div>
+    </div>
+    
+    <div id="models">
+        <div id="picto_loc"> 
+            <h2 class="departM" id="pictop"> <i id="pinicon" class="fa-solid fa-location-dot"></i> </h2>
+        </div>
+        
+        
+        <div id="container3D" >
+            
+        </div>
+
+    </div>
+
+    <div id="front_panel">
+        <div id="topSEC" >
+            <button id="bttn-X">
+            <i class="fa-solid fa-square-xmark"></i>
+        </button>
+        </div>
+        <div id="modall" style="background-color: rgba(36, 26, 122, 0.63); width: 350px; height: 360px; display: inline-flex; flex-direction: column; margin: 30px; margin-right: 10px; margin-top: 0; margin-bottom: 0; border-radius: 20px; vertical-align: top; text-align: center; position: relative;">
+            <iframe id="photoDepM" src="public/Photo/Default_Photo.png" alt="" style="background:none; border: none; width: 230px; height: 230px; border-radius: 10px; display: block; margin-top: 30px; margin-bottom: 25px; margin-left: 56px; margin-right: 56px; object-fit: contain;" scrolling="no" width="230px" height="230px"> </iframe>
+            <i id="NameofOD">Office/Department</i>
+        </div>
+        <div style="background-color: rgba(78, 62, 219, 0.548); width: 470px; height: 360px; display: inline-block; margin-right: 30px; margin-left: 0; margin-top: 0; margin-bottom: 0; vertical-align: middle; border-radius: 20px; position: relative;">
+            <div style="background:none; width: 470px; height: 40px; position:absolute; bottom: 0; "> 
+                <i id="arrows" style="margin-left:15px; color: rgba(255, 255, 255, 0.699); font-size: 35px; position: absolute;left: 0;" class="fa-solid fa-caret-left"></i>
+                <i id="arrows" style="margin-right:15px; color: rgba(255, 255, 255, 0.699); font-size: 35px; position: absolute;right: 0;" class="fa-solid fa-caret-right"></i>
+            </div>
+        </div>
+ 
+    </div>
+
+    
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./node_modules/three/build/three.module.js",
+                "three/addons/": "./node_modules/three/examples/jsm/",
+                "three/zMath/": "./node_modules/three/src/math/"
+            }
+        }
+    </script>
+
+    <script type="module" src="main.js"></script>
+
+    <script type="module" src="functions.js">
+       
+    </script>
+    
+
+</body>
+
+</html>
